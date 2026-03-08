@@ -32,22 +32,7 @@ I also share this journey on my Instagram [@buildwithmami](https://www.instagram
 
 ### Repository Structure
 
-Solutions are organized by **platform → language**. This makes it easy to find solutions in the language you're most comfortable with.
-
-```
-algorithm-with-mami/
-├── LeetCode/
-│   ├── JavaScript/
-│   └── Python/
-├── CodeWars/
-│   ├── JavaScript/
-│   ├── Python/
-│   └── SQL/
-└── HackerRank/
-    ├── CPP/
-    ├── JavaScript/
-    └── Python/
-```
+Solutions are organized by **platform → language**. Each platform has its own folder, and inside it, solutions are grouped by programming language. New languages and platforms are added as I solve more problems.
 
 ---
 
@@ -101,22 +86,7 @@ Bu süreci Instagram'da da [@buildwithmami](https://www.instagram.com/buildwithm
 
 ### Repo Yapısı
 
-Çözümler **platform → dil** hiyerarşisine göre düzenlenmiştir. Böylece hangi dilde çalışıyorsan kolayca ilgili klasöre gidebilirsin.
-
-```
-algorithm-with-mami/
-├── LeetCode/
-│   ├── JavaScript/
-│   └── Python/
-├── CodeWars/
-│   ├── JavaScript/
-│   ├── Python/
-│   └── SQL/
-└── HackerRank/
-    ├── CPP/
-    ├── JavaScript/
-    └── Python/
-```
+Çözümler **platform → dil** hiyerarşisine göre düzenlenmiştir. Her platformun kendi klasörü var, içinde de dile göre ayrılmış alt klasörler bulunuyor. Yeni diller ve platformlar çözdükçe ekleniyor.
 
 ---
 
