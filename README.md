@@ -1,31 +1,137 @@
-# Algorithm with Js
+# Algorithm with Mami
 
-This repository consists of Javascript solutions to LeetCode Algorithm questions that I solved during the process of improving myself and preparing for the interview.
+> 🇬🇧 [English](#english) | 🇹🇷 [Türkçe](#türkçe)
 
-My goal here is to develop together by exchanging ideas with every developer who is open to development. For this purpose, we broadcast on the kamp.us discord server whenever we find time, and we solve LeetCode algorithms together with the participants. We share the algorithms we solved in this repository.
+---
 
-> To join our Discord server 👉🏼 https://discord.gg/kampus
+## English
 
+### About
 
-## How to use
-> :warning: **Reminding**: What I will tell here is important for a better user experience. You don't have to follow the instructions. Because we respect the way everyone learns 😊
+This repository is my personal log of algorithm and data structure problems. Every file you see here is a problem I solved — with my own approach, thought process, and solution code.
 
-### Step 1: Star this repository
-<img width="1271" alt="Ekran Resmi 2023-09-01 01 59 40" src="https://github.com/muhammed-gumus/algorithm-with-js/assets/86381278/88647695-eb9b-45dc-94bc-7269a9826144">
+The goal is threefold:
 
-### Step 2: Open LeetCode
-<img width="1470" alt="Ekran Resmi 2023-09-01 02 03 57" src="https://github.com/muhammed-gumus/algorithm-with-js/assets/86381278/cce97680-f913-4765-99dd-04c859a12aec">
+1. **Document** every problem I solve so I can revisit and review them later.
+2. **Track** my improvement over time across different topics and difficulty levels.
+3. **Share** my solutions with other developers who are learning or preparing for technical interviews.
 
-### Step 3: Open any question in this repository and try to solve it
-<img width="1470" alt="Ekran Resmi 2023-09-01 02 35 24" src="https://github.com/muhammed-gumus/algorithm-with-js/assets/86381278/aca7859e-a8e7-44ab-a917-314db75a6c5b">
+I also share this journey on my Instagram [@buildwithmami](https://www.instagram.com/buildwithmami/reels/) for those who prefer video walkthroughs.
 
-### Step 4: Don't be upset if you can't solve it. Open the solutions here and try to understand what has been done
-<img width="1470" alt="Ekran Resmi 2023-09-01 02 11 49" src="https://github.com/muhammed-gumus/algorithm-with-js/assets/86381278/01f5d20f-f5e0-414c-a369-a39fe8825cf9">
+---
 
-### Step 5: Do not hesitate to ask for help on the kampus-soru-cevap channel on matters you do not understand.
-<img width="1156" alt="Ekran Resmi 2023-09-01 02 38 57" src="https://github.com/muhammed-gumus/algorithm-with-js/assets/86381278/af17515c-29c7-46f9-aeb7-72fd64b4a190">
+### Platforms
 
+| Platform   | Focus                              | Link                   |
+| ---------- | ---------------------------------- | ---------------------- |
+| LeetCode   | Interview prep, DSA fundamentals   | https://leetcode.com   |
+| HackerRank | Problem solving, domain challenges | https://hackerrank.com |
+| CodeWars   | Code kata, language mastery        | https://codewars.com   |
 
+---
 
+### Repository Structure
 
+Solutions are organized by **platform → language**. This makes it easy to find solutions in the language you're most comfortable with.
 
+```
+algorithm-with-mami/
+├── LeetCode/
+│   ├── JavaScript/
+│   └── Python/
+├── CodeWars/
+│   ├── JavaScript/
+│   └── Python/
+└── HackerRank/
+    ├── JavaScript/
+    └── Python/
+```
+
+---
+
+### How to Use This Repo
+
+1. **Star** the repository to save it for later.
+2. Pick a problem you want to practice and try solving it yourself first — don't look at the solution straight away.
+3. If you get stuck, read through the solution file and understand the approach.
+4. Experiment with it: modify the solution, test edge cases, try a different approach.
+
+> The best way to learn algorithms isn't to memorize solutions — it's to understand the pattern behind each one.
+
+---
+
+### Contributing
+
+Found a bug? Have a cleaner or more efficient solution? Want to add a solution in another language?
+
+- Open an **issue** to discuss or report something
+- Submit a **pull request** with your changes
+
+All contributions are welcome!
+
+---
+
+## Türkçe
+
+### Hakkında
+
+Bu repo, algoritma ve veri yapısı problemlerini çözdükçe dökümante ettiğim kişisel bir kaynaktır. Buradaki her dosya benim kendi yaklaşımımla çözdüğüm bir problemi temsil eder.
+
+Üç temel amacım var:
+
+1. **Dökümante etmek** — çözdüğüm her soruyu ileride tekrar gözden geçirebilmek için kayıt altına almak.
+2. **Takip etmek** — farklı konular ve zorluk seviyeleri arasındaki gelişimimi izlemek.
+3. **Paylaşmak** — hem kendi öğrenme sürecini belgeleyen hem de teknik mülakata hazırlanan geliştiricilerle çözümleri paylaşmak.
+
+Bu süreci Instagram'da da [@buildwithmami](https://www.instagram.com/buildwithmami/reels/) üzerinden paylaşıyorum.
+
+---
+
+### Platformlar
+
+| Platform   | Odak                              | Link                   |
+| ---------- | --------------------------------- | ---------------------- |
+| LeetCode   | Mülakat hazırlığı, DSA temelleri  | https://leetcode.com   |
+| HackerRank | Problem çözme, alan bazlı sorular | https://hackerrank.com |
+| CodeWars   | Kod katası, dil ustalığı          | https://codewars.com   |
+
+---
+
+### Repo Yapısı
+
+Çözümler **platform → dil** hiyerarşisine göre düzenlenmiştir. Böylece hangi dilde çalışıyorsan kolayca ilgili klasöre gidebilirsin.
+
+```
+algorithm-with-mami/
+├── LeetCode/
+│   ├── JavaScript/
+│   └── Python/
+├── CodeWars/
+│   ├── JavaScript/
+│   └── Python/
+└── HackerRank/
+    ├── JavaScript/
+    └── Python/
+```
+
+---
+
+### Nasıl Kullanılır?
+
+1. Repoyu **star'la** ve kaydet.
+2. Çalışmak istediğin bir problemi seç ve önce kendi başına çözmeye çalış — çözüme hemen bakma.
+3. Takılırsan çözüm dosyasını aç ve yaklaşımı anlamaya çalış.
+4. Üzerinde oyna: kodu değiştir, uç durumları test et, farklı bir yaklaşım dene.
+
+> Algoritmaları öğrenmenin en iyi yolu çözümleri ezberlemek değil — her birinin ardındaki kalıbı anlamaktır.
+
+---
+
+### Katkıda Bulunmak
+
+Bir hata mı buldun? Daha temiz veya verimli bir çözümün mü var? Başka bir dilde çözüm eklemek mi istiyorsun?
+
+- Bir şeyi tartışmak ya da bildirmek için **issue** aç
+- Değişikliklerini **pull request** olarak gönder
+
+Her türlü katkı memnuniyetle karşılanır!
