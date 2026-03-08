@@ -41,8 +41,10 @@ algorithm-with-mami/
 │   └── Python/
 ├── CodeWars/
 │   ├── JavaScript/
-│   └── Python/
+│   ├── Python/
+│   └── SQL/
 └── HackerRank/
+    ├── CPP/
     ├── JavaScript/
     └── Python/
 ```
@@ -108,8 +110,10 @@ algorithm-with-mami/
 │   └── Python/
 ├── CodeWars/
 │   ├── JavaScript/
-│   └── Python/
+│   ├── Python/
+│   └── SQL/
 └── HackerRank/
+    ├── CPP/
     ├── JavaScript/
     └── Python/
 ```
