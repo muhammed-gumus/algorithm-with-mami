@@ -9,6 +9,7 @@ export default function AdminForm({ problem, onSave, onCancel }) {
     platform: 'leetcode',
     language: 'javascript',
     difficulty: 'medium',
+    url: '',
     description: '',
     code: '',
   });
@@ -24,6 +25,7 @@ export default function AdminForm({ problem, onSave, onCancel }) {
         platform: problem.platform || 'leetcode',
         language: problem.language || 'javascript',
         difficulty: problem.difficulty || 'medium',
+        url: problem.url || '',
         description: problem.description || '',
         code: problem.code || '',
       });
@@ -146,6 +148,19 @@ export default function AdminForm({ problem, onSave, onCancel }) {
               <option value="hard">Hard</option>
             </select>
           </div>
+        </div>
+
+        {/* Platform URL */}
+        <div>
+          <label className="block font-body font-bold mb-2">Platform URL (Opsiyonel)</label>
+          <input
+            type="url"
+            name="url"
+            value={formData.url}
+            onChange={handleChange}
+            className="neo-input"
+            placeholder="https://leetcode.com/problems/..."
+          />
         </div>
 
         {/* Açıklama */}

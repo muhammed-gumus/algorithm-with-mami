@@ -239,7 +239,8 @@
       "difficulty": "easy",
       "description": "HackerRank - Birthday Cake Candles\nYou are in charge of the cake for a child's birthday.\nCount how many candles are tallest — only those can be blown out.",
       "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring ltrim(const string &);\nstring rtrim(const string &);\nvector<string> split(const string &);\n\nint birthdayCakeCandles(vector<int> candles) {\n    int maxHeight = *max_element(candles.begin(), candles.end());\n    return count(candles.begin(), candles.end(), maxHeight);\n}\n\nint main() {\n    ofstream fout(getenv(\"OUTPUT_PATH\"));\n\n    string candles_count_temp;\n    getline(cin, candles_count_temp);\n    int candles_count = stoi(ltrim(rtrim(candles_count_temp)));\n\n    string candles_temp_temp;\n    getline(cin, candles_temp_temp);\n    vector<string> candles_temp = split(rtrim(candles_temp_temp));\n    vector<int> candles(candles_count);\n    for (int i = 0; i < candles_count; i++) {\n        candles[i] = stoi(candles_temp[i]);\n    }\n\n    int result = birthdayCakeCandles(candles);\n    fout << result << \"\\n\";\n\n    fout.close();\n    return 0;\n}\n\nstring ltrim(const string &str) {\n    string s(str);\n    s.erase(s.begin(), find_if(s.begin(), s.end(), [](unsigned char c) {\n        return !isspace(c);\n    }));\n    return s;\n}\n\nstring rtrim(const string &str) {\n    string s(str);\n    s.erase(find_if(s.rbegin(), s.rend(), [](unsigned char c) {\n        return !isspace(c);\n    }).base(), s.end());\n    return s;\n}\n\nvector<string> split(const string &str) {\n    vector<string> tokens;\n    string::size_type start = 0;\n    string::size_type end = 0;\n    while ((end = str.find(\" \", start)) != string::npos) {\n        tokens.push_back(str.substr(start, end - start));\n        start = end + 1;\n    }\n    tokens.push_back(str.substr(start));\n    return tokens;\n}",
-      "createdAt": "2026-03-24T21:36:35.238Z"
+      "createdAt": "2026-03-24T21:36:35.238Z",
+      "url": "https://www.hackerrank.com/challenges/birthday-cake-candles/problem"
     },
     {
       "id": "mini-max-sum",
@@ -249,7 +250,8 @@
       "difficulty": "easy",
       "description": "HackerRank - Mini-Max Sum\nGiven five positive integers, find the minimum and maximum values that can be\ncalculated by summing exactly four of the five integers.\nPrint the respective minimum and maximum values on a single line.\nmin sum = exclude the largest element, max sum = exclude the smallest",
       "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring ltrim(const string &);\nstring rtrim(const string &);\nvector<string> split(const string &);\n\nvoid miniMaxSum(vector<int> arr) {\n    long long total = 0;\n    for (int x : arr) total += x;\n\n    long long largest  = *max_element(arr.begin(), arr.end());\n    long long smallest = *min_element(arr.begin(), arr.end());\n\n    cout << total - largest << \" \" << total - smallest << \"\\n\";\n}\n\nint main() {\n    string arr_temp_temp;\n    getline(cin, arr_temp_temp);\n    vector<string> arr_temp = split(rtrim(arr_temp_temp));\n    vector<int> arr(5);\n    for (int i = 0; i < 5; i++) {\n        arr[i] = stoi(arr_temp[i]);\n    }\n\n    miniMaxSum(arr);\n\n    return 0;\n}\n\nstring ltrim(const string &str) {\n    string s(str);\n    s.erase(s.begin(), find_if(s.begin(), s.end(), [](unsigned char c) {\n        return !isspace(c);\n    }));\n    return s;\n}\n\nstring rtrim(const string &str) {\n    string s(str);\n    s.erase(find_if(s.rbegin(), s.rend(), [](unsigned char c) {\n        return !isspace(c);\n    }).base(), s.end());\n    return s;\n}\n\nvector<string> split(const string &str) {\n    vector<string> tokens;\n    string::size_type start = 0;\n    string::size_type end = 0;\n    while ((end = str.find(\" \", start)) != string::npos) {\n        tokens.push_back(str.substr(start, end - start));\n        start = end + 1;\n    }\n    tokens.push_back(str.substr(start));\n    return tokens;\n}",
-      "createdAt": "2026-03-24T21:36:35.238Z"
+      "createdAt": "2026-03-24T21:36:35.238Z",
+      "url": "https://www.hackerrank.com/challenges/mini-max-sum/problem"
     },
     {
       "id": "plus-minus",
@@ -259,7 +261,8 @@
       "difficulty": "easy",
       "description": "HackerRank - Plus Minus\nGiven an array of integers, calculate the ratios of its elements that are\npositive, negative, and zero. Print the decimal value of each fraction on a\nnew line with 6 places after the decimal.",
       "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring ltrim(const string &);\nstring rtrim(const string &);\nvector<string> split(const string &);\n\nvoid plusMinus(vector<int> arr) {\n    int n = arr.size();\n    int pos = 0, neg = 0, zer = 0;\n\n    for (int x : arr) {\n        if (x > 0) pos++;\n        else if (x < 0) neg++;\n        else zer++;\n    }\n\n    cout << fixed << setprecision(6) << (double)pos / n << \"\\n\";\n    cout << fixed << setprecision(6) << (double)neg / n << \"\\n\";\n    cout << fixed << setprecision(6) << (double)zer / n << \"\\n\";\n}\n\nint main() {\n    string n_temp;\n    getline(cin, n_temp);\n    int n = stoi(ltrim(rtrim(n_temp)));\n\n    string arr_temp_temp;\n    getline(cin, arr_temp_temp);\n    vector<string> arr_temp = split(rtrim(arr_temp_temp));\n    vector<int> arr(n);\n    for (int i = 0; i < n; i++) {\n        arr[i] = stoi(arr_temp[i]);\n    }\n\n    plusMinus(arr);\n\n    return 0;\n}\n\nstring ltrim(const string &str) {\n    string s(str);\n    s.erase(s.begin(), find_if(s.begin(), s.end(), [](unsigned char c) {\n        return !isspace(c);\n    }));\n    return s;\n}\n\nstring rtrim(const string &str) {\n    string s(str);\n    s.erase(find_if(s.rbegin(), s.rend(), [](unsigned char c) {\n        return !isspace(c);\n    }).base(), s.end());\n    return s;\n}\n\nvector<string> split(const string &str) {\n    vector<string> tokens;\n    string::size_type start = 0;\n    string::size_type end = 0;\n    while ((end = str.find(\" \", start)) != string::npos) {\n        tokens.push_back(str.substr(start, end - start));\n        start = end + 1;\n    }\n    tokens.push_back(str.substr(start));\n    return tokens;\n}",
-      "createdAt": "2026-03-24T21:36:35.238Z"
+      "createdAt": "2026-03-24T21:36:35.238Z",
+      "url": "https://www.hackerrank.com/challenges/plus-minus/problem"
     },
     {
       "id": "staircase",
@@ -269,7 +272,8 @@
       "difficulty": "easy",
       "description": "HackerRank - Staircase\nPrint a staircase of height n.\nThe staircase is right-aligned, composed of # symbols and spaces.\nThe last line is not preceded by any spaces.",
       "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring ltrim(const string &);\nstring rtrim(const string &);\n\nvoid staircase(int n) {\n    for (int i = 1; i <= n; i++) {\n        cout << string(n - i, ' ') << string(i, '#') << \"\\n\";\n    }\n}\n\nint main() {\n    string n_temp;\n    getline(cin, n_temp);\n    int n = stoi(ltrim(rtrim(n_temp)));\n\n    staircase(n);\n\n    return 0;\n}\n\nstring ltrim(const string &str) {\n    string s(str);\n    s.erase(s.begin(), find_if(s.begin(), s.end(), [](unsigned char c) {\n        return !isspace(c);\n    }));\n    return s;\n}\n\nstring rtrim(const string &str) {\n    string s(str);\n    s.erase(find_if(s.rbegin(), s.rend(), [](unsigned char c) {\n        return !isspace(c);\n    }).base(), s.end());\n    return s;\n}",
-      "createdAt": "2026-03-24T21:36:35.238Z"
+      "createdAt": "2026-03-24T21:36:35.238Z",
+      "url": "https://www.hackerrank.com/challenges/staircase/problem"
     },
     {
       "id": "time-conversion",
@@ -279,7 +283,8 @@
       "difficulty": "easy",
       "description": "HackerRank - Time Conversion\nGiven a time in 12-hour AM/PM format, convert it to 24-hour (military) time.\nExamples:\n12:00:00AM -> 00:00:00\n12:00:00PM -> 12:00:00\n07:05:45PM -> 19:05:45",
       "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nstring ltrim(const string &);\nstring rtrim(const string &);\n\nstring timeConversion(string s) {\n    string period = s.substr(s.size() - 2); // \"AM\" or \"PM\"\n    string time   = s.substr(0, s.size() - 2);\n\n    int hh = stoi(time.substr(0, 2));\n    string rest = time.substr(2); // \":MM:SS\"\n\n    if (period == \"AM\") {\n        hh = (hh == 12) ? 0 : hh;\n    } else {\n        hh = (hh == 12) ? 12 : hh + 12;\n    }\n\n    char buf[3];\n    snprintf(buf, sizeof(buf), \"%02d\", hh);\n    return string(buf) + rest;\n}\n\nint main() {\n    ofstream fout(getenv(\"OUTPUT_PATH\"));\n\n    string s;\n    getline(cin, s);\n\n    string result = timeConversion(s);\n    fout << result << \"\\n\";\n\n    fout.close();\n    return 0;\n}\n\nstring ltrim(const string &str) {\n    string s(str);\n    s.erase(s.begin(), find_if(s.begin(), s.end(), [](unsigned char c) {\n        return !isspace(c);\n    }));\n    return s;\n}\n\nstring rtrim(const string &str) {\n    string s(str);\n    s.erase(find_if(s.rbegin(), s.rend(), [](unsigned char c) {\n        return !isspace(c);\n    }).base(), s.end());\n    return s;\n}",
-      "createdAt": "2026-03-24T21:36:35.238Z"
+      "createdAt": "2026-03-24T21:36:35.238Z",
+      "url": "https://www.hackerrank.com/challenges/time-conversion/problem"
     },
     {
       "id": "a-very-big-sum",
@@ -289,7 +294,8 @@
       "difficulty": "easy",
       "description": "HackerRank - A Very Big Sum\nCalculate and print the sum of array elements, considering that some values\ncan be very large. Python handles arbitrarily large integers natively.",
       "code": "import os\n\ndef aVeryBigSum(ar):\n    return sum(ar)\n\nif __name__ == '__main__':\n    fptr = open(os.environ['OUTPUT_PATH'], 'w')\n    ar_count = int(input().strip())\n    ar = list(map(int, input().rstrip().split()))\n    result = aVeryBigSum(ar)\n    fptr.write(str(result) + '\\n')\n    fptr.close()",
-      "createdAt": "2026-03-24T21:36:35.238Z"
+      "createdAt": "2026-03-24T21:36:35.238Z",
+      "url": "https://www.hackerrank.com/challenges/a-very-big-sum/problem"
     },
     {
       "id": "simple-array-sum",
@@ -299,7 +305,8 @@
       "difficulty": "easy",
       "description": "HackerRank - Simple Array Sum\nGiven an array of integers, find the sum of its elements.",
       "code": "import os\n\ndef simpleArraySum(ar):\n    return sum(ar)\n\nif __name__ == '__main__':\n    fptr = open(os.environ['OUTPUT_PATH'], 'w')\n    ar_count = int(input().strip())\n    ar = list(map(int, input().rstrip().split()))\n    result = simpleArraySum(ar)\n    fptr.write(str(result) + '\\n')\n    fptr.close()",
-      "createdAt": "2026-03-24T21:36:35.238Z"
+      "createdAt": "2026-03-24T21:36:35.238Z",
+      "url": "https://www.hackerrank.com/challenges/simple-array-sum/problem"
     },
     {
       "id": "solve-me-first",
@@ -309,7 +316,8 @@
       "difficulty": "easy",
       "description": "HackerRank - Solve Me First\nCompute the sum of two integers.",
       "code": "def solveMeFirst(a, b):\n    return a + b\n\nif __name__ == '__main__':\n    a = int(input())\n    b = int(input())\n    print(solveMeFirst(a, b))",
-      "createdAt": "2026-03-24T21:36:35.239Z"
+      "createdAt": "2026-03-24T21:36:35.239Z",
+      "url": "https://www.hackerrank.com/challenges/solve-me-first/problem"
     },
     {
       "id": "adultsonly",

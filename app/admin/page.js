@@ -197,9 +197,26 @@ export default function AdminDashboard() {
                   {[...problems].reverse().map(problem => (
                     <tr key={problem.id} className="hover:bg-gray-50 transition-colors">
                       <td className="p-4 font-bold max-w-xs truncate">
-                        <Link href={`/problem/${problem.id}`} target="_blank" className="hover:text-neo-accent hover:underline">
-                          {problem.title}
-                        </Link>
+                        <div className="flex items-center gap-2">
+                          <Link href={`/problem/${problem.id}`} target="_blank" className="hover:text-neo-accent hover:underline">
+                            {problem.title}
+                          </Link>
+                          {problem.url && (
+                            <a 
+                              href={problem.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="text-neo-blue hover:text-neo-accent"
+                              title="Platformda Gör"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                              </svg>
+                            </a>
+                          )}
+                        </div>
                       </td>
                       <td className="p-4 hidden md:table-cell capitalize font-bold opacity-80">
                         {problem.platform}
