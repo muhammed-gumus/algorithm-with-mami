@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 const platforms = [
-  { name: 'leetcode', dir: 'LeetCode/JavaScript', lang: 'javascript', ext: '.js' },
-  { name: 'hackerrank', dir: 'HackerRank/CPP', lang: 'cpp', ext: '.cpp' },
-  { name: 'hackerrank', dir: 'HackerRank/Python', lang: 'python', ext: '.py' },
-  { name: 'codewars', dir: 'CodeWars/SQL', lang: 'sql', ext: '.sql' },
+  { name: 'leetcode', dir: 'solutions/LeetCode/JavaScript', lang: 'javascript', ext: '.js' },
+  { name: 'hackerrank', dir: 'solutions/HackerRank/CPP', lang: 'cpp', ext: '.cpp' },
+  { name: 'hackerrank', dir: 'solutions/HackerRank/Python', lang: 'python', ext: '.py' },
+  { name: 'codewars', dir: 'solutions/CodeWars/SQL', lang: 'sql', ext: '.sql' },
 ];
 
 const basePath = path.join(__dirname, '..');

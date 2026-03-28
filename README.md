@@ -32,7 +32,7 @@ I also share this journey on my Instagram [@buildwithmami](https://www.instagram
 
 ### Repository Structure
 
-Solutions are organized by **platform → language**. Each platform has its own folder, and inside it, solutions are grouped by programming language. New languages and platforms are added as I solve more problems.
+Solutions are organized within the `solutions/` directory by **platform → language**. Each platform has its own folder inside `solutions/`, and solutions are further grouped by programming language. New languages and platforms are added as I solve more problems.
 
 ---
 
@@ -86,7 +86,7 @@ Bu süreci Instagram'da da [@buildwithmami](https://www.instagram.com/buildwithm
 
 ### Repo Yapısı
 
-Çözümler **platform → dil** hiyerarşisine göre düzenlenmiştir. Her platformun kendi klasörü var, içinde de dile göre ayrılmış alt klasörler bulunuyor. Yeni diller ve platformlar çözdükçe ekleniyor.
+Çözümler `solutions/` dizini altında **platform → dil** hiyerarşisine göre düzenlenmiştir. `solutions/` klasörü içinde her platformun kendi klasörü var, onun içinde de dile göre ayrılmış alt klasörler bulunuyor. Yeni diller ve platformlar çözdükçe ekleniyor.
 
 ---
 
