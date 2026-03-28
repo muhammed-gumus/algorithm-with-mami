@@ -17,8 +17,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-neo-yellow border-b-3 border-neo-black py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-heading font-black mb-6 leading-tight">
-            Algoritma Soruları<br />& Çözümleri
+          <h1 className="text-5xl md:text-7xl font-heading font-black mb-6 ">
+            Algoritma Soruları<br />ve<br /> Çözümleri
           </h1>
           <p className="text-xl font-body max-w-2xl mx-auto mb-10 text-neo-black/80 font-medium">
             Mülakatlara hazırlık sürecindeki LeetCode, HackerRank ve CodeWars çözümleri.
