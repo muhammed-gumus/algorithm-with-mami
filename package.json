@@ -1,0 +1,37 @@
+{
+  "name": "algorithm-with-mami",
+  "version": "1.0.0",
+  "description": "Algoritma soruları ve çözümleri platformu — LeetCode, HackerRank, CodeWars",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammed-gumus/algorithm-with-mami.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammed-gumus/algorithm-with-mami/issues"
+  },
+  "homepage": "https://github.com/muhammed-gumus/algorithm-with-mami#readme",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "highlight.js": "^11.11.1",
+    "jose": "^6.2.2",
+    "next": "^16.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.1",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2"
+  }
+}

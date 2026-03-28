@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neo-yellow: #FFD600;
+  --color-neo-accent: #2DD4BF;
+  --color-neo-blue: #4ECDC4;
+  --color-neo-orange: #FF8A00;
+  --color-neo-purple: #A855F7;
+  --color-neo-green: #22C55E;
+  --color-neo-red: #EF4444;
+  --color-neo-bg: #FFF8E7;
+  --color-neo-black: #1A1A2E;
+  --color-neo-white: #FFFFFF;
+
+  --shadow-neo: 4px 4px 0px 0px #1A1A2E;
+  --shadow-neo-lg: 6px 6px 0px 0px #1A1A2E;
+  --shadow-neo-xl: 8px 8px 0px 0px #1A1A2E;
+  --shadow-neo-hover: 2px 2px 0px 0px #1A1A2E;
+  --shadow-neo-active: 1px 1px 0px 0px #1A1A2E;
+
+  --font-heading: var(--font-heading), sans-serif;
+  --font-body: var(--font-body), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-neo-bg);
+    color: var(--color-neo-black);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: bold;
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .border-3 {
+    border-width: 3px;
+  }
+}
+
+@layer components {
+  /* Neobrutalism buton stili */
+  .neo-btn {
+    @apply px-6 py-3 font-heading font-bold text-lg
+           border-3 border-neo-black bg-neo-yellow
+           shadow-neo cursor-pointer
+           transition-all duration-150 ease-in-out
+           hover:translate-x-[2px] hover:translate-y-[2px]
+           hover:shadow-neo-hover
+           active:translate-x-[3px] active:translate-y-[3px]
+           active:shadow-neo-active;
+  }
+
+  /* Neobrutalism kart stili */
+  .neo-card {
+    @apply border-3 border-neo-black bg-neo-white
+           shadow-neo p-6
+           transition-all duration-150 ease-in-out
+           hover:translate-x-[2px] hover:translate-y-[2px]
+           hover:shadow-neo-hover;
+  }
+
+  /* Neobrutalism input stili */
+  .neo-input {
+    @apply w-full px-4 py-3 font-body text-lg
+           border-3 border-neo-black bg-neo-white
+           focus:outline-none focus:ring-0
+           focus:shadow-neo;
+  }
+
+  /* Neobrutalism badge stili */
+  .neo-badge {
+    @apply inline-block px-3 py-1 text-sm font-heading font-bold
+           border-2 border-neo-black transition-all duration-150 ease-in-out;
+  }
+
+  .neo-badge:hover {
+    @apply scale-105;
+  }
+}
+
+/* Sayfa Yüklenme Animasyonları */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-up:nth-child(1) { animation-delay: 0.1s; }
+.animate-slide-up:nth-child(2) { animation-delay: 0.2s; }
+.animate-slide-up:nth-child(3) { animation-delay: 0.3s; }
+.animate-slide-up:nth-child(4) { animation-delay: 0.4s; }
+.animate-slide-up:nth-child(5) { animation-delay: 0.5s; }
+.animate-slide-up:nth-child(6) { animation-delay: 0.6s; }
